@@ -1,0 +1,121 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\UNIVERSITAT\\Q6\\VJ\\Projecte3D\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EE3F1D5E-8FEA-0551-06A2-CB848950EB86}|Assembly-CSharp.csproj|C:\\UNIVERSITAT\\Q6\\VJ\\Projecte3D\\assets\\_scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE3F1D5E-8FEA-0551-06A2-CB848950EB86}|Assembly-CSharp.csproj|solutionrelative:assets\\_scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE3F1D5E-8FEA-0551-06A2-CB848950EB86}|Assembly-CSharp.csproj|C:\\UNIVERSITAT\\Q6\\VJ\\Projecte3D\\assets\\_scripts\\tilespawnerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE3F1D5E-8FEA-0551-06A2-CB848950EB86}|Assembly-CSharp.csproj|solutionrelative:assets\\_scripts\\tilespawnerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE3F1D5E-8FEA-0551-06A2-CB848950EB86}|Assembly-CSharp.csproj|C:\\UNIVERSITAT\\Q6\\VJ\\Projecte3D\\assets\\_scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE3F1D5E-8FEA-0551-06A2-CB848950EB86}|Assembly-CSharp.csproj|solutionrelative:assets\\_scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE3F1D5E-8FEA-0551-06A2-CB848950EB86}|Assembly-CSharp.csproj|c:\\universitat\\q6\\vj\\projecte3d\\assets\\_scripts\\gameover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE3F1D5E-8FEA-0551-06A2-CB848950EB86}|Assembly-CSharp.csproj|solutionrelative:assets\\_scripts\\gameover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE3F1D5E-8FEA-0551-06A2-CB848950EB86}|Assembly-CSharp.csproj|c:\\universitat\\q6\\vj\\projecte3d\\assets\\_scripts\\scoreupdater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE3F1D5E-8FEA-0551-06A2-CB848950EB86}|Assembly-CSharp.csproj|solutionrelative:assets\\_scripts\\scoreupdater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE3F1D5E-8FEA-0551-06A2-CB848950EB86}|Assembly-CSharp.csproj|C:\\UNIVERSITAT\\Q6\\VJ\\Projecte3D\\assets\\templerunprefabs\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE3F1D5E-8FEA-0551-06A2-CB848950EB86}|Assembly-CSharp.csproj|solutionrelative:assets\\templerunprefabs\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ScoreUpdater.cs",
+              "DocumentMoniker": "C:\\UNIVERSITAT\\Q6\\VJ\\Projecte3D\\Assets\\_Scripts\\ScoreUpdater.cs",
+              "RelativeDocumentMoniker": "Assets\\_Scripts\\ScoreUpdater.cs",
+              "ToolTip": "C:\\UNIVERSITAT\\Q6\\VJ\\Projecte3D\\Assets\\_Scripts\\ScoreUpdater.cs",
+              "RelativeToolTip": "Assets\\_Scripts\\ScoreUpdater.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T11:28:44.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\UNIVERSITAT\\Q6\\VJ\\Projecte3D\\Assets\\_Scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\_Scripts\\GameManager.cs",
+              "ToolTip": "C:\\UNIVERSITAT\\Q6\\VJ\\Projecte3D\\Assets\\_Scripts\\GameManager.cs",
+              "RelativeToolTip": "Assets\\_Scripts\\GameManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T11:12:17.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameOver.cs",
+              "DocumentMoniker": "C:\\UNIVERSITAT\\Q6\\VJ\\Projecte3D\\Assets\\_Scripts\\GameOver.cs",
+              "RelativeDocumentMoniker": "Assets\\_Scripts\\GameOver.cs",
+              "ToolTip": "C:\\UNIVERSITAT\\Q6\\VJ\\Projecte3D\\Assets\\_Scripts\\GameOver.cs",
+              "RelativeToolTip": "Assets\\_Scripts\\GameOver.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T11:10:30.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TileSpawnerScript.cs",
+              "DocumentMoniker": "C:\\UNIVERSITAT\\Q6\\VJ\\Projecte3D\\Assets\\_Scripts\\TileSpawnerScript.cs",
+              "RelativeDocumentMoniker": "Assets\\_Scripts\\TileSpawnerScript.cs",
+              "ToolTip": "C:\\UNIVERSITAT\\Q6\\VJ\\Projecte3D\\Assets\\_Scripts\\TileSpawnerScript.cs",
+              "RelativeToolTip": "Assets\\_Scripts\\TileSpawnerScript.cs",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAiwFkAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T09:53:12.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "C:\\UNIVERSITAT\\Q6\\VJ\\Projecte3D\\Assets\\_Scripts\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\_Scripts\\PlayerController.cs",
+              "ToolTip": "C:\\UNIVERSITAT\\Q6\\VJ\\Projecte3D\\Assets\\_Scripts\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\_Scripts\\PlayerController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwBEAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T08:51:40.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Tile.cs",
+              "DocumentMoniker": "C:\\UNIVERSITAT\\Q6\\VJ\\Projecte3D\\Assets\\TempleRunPrefabs\\Tile.cs",
+              "RelativeDocumentMoniker": "Assets\\TempleRunPrefabs\\Tile.cs",
+              "ToolTip": "C:\\UNIVERSITAT\\Q6\\VJ\\Projecte3D\\Assets\\TempleRunPrefabs\\Tile.cs",
+              "RelativeToolTip": "Assets\\TempleRunPrefabs\\Tile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T15:48:35.997Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
