@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638491383688150147
-    m_Hash: 835017306
+      ticks: 638498917320223775
+    m_Hash: 637062106
   m_LockFileStatus:
     m_FilePath: C:/UNIVERSITAT/Q6/VJ/VJ3D/Projecte3D/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638491383688215192
-    m_Hash: 1988326035
+      ticks: 638498917320228770
+    m_Hash: 3994440298
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:

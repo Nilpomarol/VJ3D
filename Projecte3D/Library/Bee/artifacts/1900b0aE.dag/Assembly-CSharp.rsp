@@ -362,11 +362,9 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.24f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.24f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/TempleRunPrefabs/Tile.cs"
-"Assets/_Scripts/CameraScript.cs"
 "Assets/_Scripts/GameManager.cs"
-"Assets/_Scripts/GameOver.cs"
 "Assets/_Scripts/PlayerController.cs"
-"Assets/_Scripts/PlayerScript.cs"
+"Assets/_Scripts/PlayerCtrl.cs"
 "Assets/_Scripts/ScoreUpdater.cs"
 "Assets/_Scripts/TileSpawnerScript.cs"
 -langversion:9.0

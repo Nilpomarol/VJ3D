@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.PlayerLoop;
-using UnityEngine.Events;
 
 
 namespace TempleRun.Player
@@ -12,7 +11,7 @@ namespace TempleRun.Player
 
 
     [RequireComponent(typeof(CharacterController), typeof(PlayerInput))]
-    public class PlayerController : MonoBehaviour
+    public class PlayerCtrl : MonoBehaviour
     {
         [SerializeField]
         private float initialPlayerSpeed = 8f;
@@ -25,6 +24,8 @@ namespace TempleRun.Player
         [SerializeField]
         private float initialGravityValue = -9.81f;
         [SerializeField]
+        private float scoreMultiplier = 10f;
+        [SerializeField]
         private LayerMask groundLayer;
         [SerializeField]
         private LayerMask turnLayer;
@@ -35,9 +36,9 @@ namespace TempleRun.Player
         [SerializeField]
         private AnimationClip slideAnimationClip;
         [SerializeField]
-        private float playerSpeed;
-        [SerializeField]
-        private float scoreMultiplier = 10f;
+        private GameObject playerModel;
+
+        
 
 
         private float gravity;
@@ -52,10 +53,13 @@ namespace TempleRun.Player
         private CharacterController controller;
 
         private int slidingAnimationId;
+        private int jumpingAnimationId;
+        private int runningAnimationId;
 
         private bool sliding = false;
+
         private float score = 0;
-        
+        private float playerSpeed;
 
         [SerializeField]
         private UnityEvent<Vector3> turnEvent;
@@ -70,6 +74,8 @@ namespace TempleRun.Player
             controller = GetComponent<CharacterController>();
 
             slidingAnimationId = Animator.StringToHash("Sliding");
+            jumpingAnimationId = Animator.StringToHash("Jumping");
+            runningAnimationId = Animator.StringToHash("Running");
 
             turnAction = PlayerInput.actions["Turn"];
             jumpAction = PlayerInput.actions["Jump"];
@@ -141,6 +147,7 @@ namespace TempleRun.Player
 
         private void PlayerSlide(InputAction.CallbackContext context)
         {
+            print(IsGrounded());
             if (!sliding && IsGrounded()) { 
                 StartCoroutine(Slide());
             }
@@ -154,10 +161,16 @@ namespace TempleRun.Player
             newControllerCenter.y -= controller.height / 2;
             controller.center = newControllerCenter;
             
+
             //fer animacio de slide
             sliding = true;
             animator.Play(slidingAnimationId);
+            
+            // playerModel.transform.localPosition = new Vector3(playerModel.transform.localPosition.x, playerModel.transform.localPosition.y - (controller.height / 2), playerModel.transform.localPosition.z);
+
             yield return new WaitForSeconds(slideAnimationClip.length);
+
+            // playerModel.transform.localPosition = new Vector3(playerModel.transform.localPosition.x, playerModel.transform.localPosition.y + (controller.height / 2), playerModel.transform.localPosition.z);
             
             //tornar el controller a la mida original
             controller.height *= 2;
@@ -171,6 +184,8 @@ namespace TempleRun.Player
             {
                 playerVelocity.y += Mathf.Sqrt(jumpHeight * gravity * -3f);
                 controller.Move(playerVelocity * Time.deltaTime);
+                print("Jumping");
+                animator.Play(jumpingAnimationId);
             }
         }
 
@@ -183,6 +198,11 @@ namespace TempleRun.Player
             score += scoreMultiplier * Time.deltaTime;
             scoreUpdateEvent.Invoke((int)score);
 
+            if (playerSpeed < maximumPlayerSpeed)
+            {
+                playerSpeed += playerSpeedIncrease * Time.deltaTime;
+            }
+
             controller.Move(transform.forward * playerSpeed * Time.deltaTime);
 
             if (IsGrounded() && playerVelocity.y < 0)
@@ -194,29 +214,25 @@ namespace TempleRun.Player
             controller.Move(playerVelocity * Time.deltaTime);
         }
 
-        private bool IsGrounded(float length = .2f)
+
+        private bool IsGrounded(float raycastDistance = 0.1f)
         {
-            Vector3 raycastOriginFirst = transform.position;
-            raycastOriginFirst.y -= controller.height / 2f;
-            raycastOriginFirst.y += .1f;
+            Bounds bounds = controller.bounds;
+            Vector3 rayOrigin = bounds.center - new Vector3(0, bounds.extents.y, 0);
+            bool grounded = Physics.Raycast(rayOrigin, Vector3.down, raycastDistance, groundLayer);
+            Debug.DrawRay(rayOrigin, Vector3.down * raycastDistance, grounded ? Color.green : Color.red);
 
-            Vector3 raycastOriginSecond = raycastOriginFirst;
-            raycastOriginFirst -= transform.forward * .2f;
-            raycastOriginSecond += transform.forward * .2f;
+            Vector3 frontRayOrigin = rayOrigin + Vector3.forward * bounds.extents.z;
+            grounded = grounded || Physics.Raycast(frontRayOrigin, Vector3.down, raycastDistance, groundLayer);
+            Debug.DrawRay(frontRayOrigin, Vector3.down * raycastDistance, grounded ? Color.green : Color.red);
 
-            //Debug.DrawLine(raycastOriginFirst, Vector3.down, Color.green, 2f);
-            //Debug.DrawLine(raycastOriginSecond, Vector3.down, Color.red, 2f);
-
-            if (Physics.Raycast(raycastOriginFirst, Vector3.down, out RaycastHit hit, length, groundLayer) || Physics.Raycast(raycastOriginSecond, Vector3.down, out RaycastHit hit2, length, groundLayer))
-            {
-                return true;
-            }
-            else { return false; }
+            return grounded;
         }
+
 
         private void OnControllerColliderHit(ControllerColliderHit hit) {
             if (((1 << hit.collider.gameObject.layer) & obstacleLayer) != 0) {
-                GameOver();
+               GameOver();
             }
         }
 
