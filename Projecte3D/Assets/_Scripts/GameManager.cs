@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     private int score;
 
+
     public void StopGame(int score) { 
         gameCanvas.SetActive(false);
         gameOverCanvas.SetActive(true);
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void StartGame() {
+        print ("StartGame");
         gameCanvas.SetActive(true);
         gameOverCanvas.SetActive(false);
         gameMenuCanvas.SetActive(false);
@@ -34,7 +36,6 @@ public class GameManager : MonoBehaviour
 
 
     public void RestartLevel() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        StartGame();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);   
     }
 }

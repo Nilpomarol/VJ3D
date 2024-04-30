@@ -108,7 +108,6 @@ namespace TempleRun.Player
         {
             Vector3? turnPosition = CheckTurn(context.ReadValue<float>());
             if (!turnPosition.HasValue) {
-                //GameOver();
                 return;
             }
             Vector3 targetDirection = Quaternion.AngleAxis(90 * context.ReadValue<float>(), Vector3.up) * movementDirection;
@@ -147,7 +146,6 @@ namespace TempleRun.Player
 
         private void PlayerSlide(InputAction.CallbackContext context)
         {
-            print(IsGrounded());
             if (!sliding && IsGrounded()) { 
                 StartCoroutine(Slide());
             }
@@ -184,7 +182,6 @@ namespace TempleRun.Player
             {
                 playerVelocity.y += Mathf.Sqrt(jumpHeight * gravity * -3f);
                 controller.Move(playerVelocity * Time.deltaTime);
-                print("Jumping");
                 animator.Play(jumpingAnimationId);
             }
         }
